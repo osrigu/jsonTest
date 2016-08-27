@@ -25,7 +25,7 @@ public class JsonTest
         CommonTokenStream tokens = new CommonTokenStream(lexer);
 
         JSONParser parser = new JSONParser(tokens);
-        ParseTree tree = parser.json(); // begin parsing at rule 'r'
+        ParseTree tree = parser.start(); // begin parsing at rule 'r'
         System.out.println(tree.toStringTree(parser)); // print LISP-style tree
     }
 }
